@@ -24,6 +24,7 @@ steps:
   displayName: Cache Maven local repo
 
 - script: mvn install -B -e
+- script: echo "pipeline workspace" $(Pipeline.Workspace)
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
